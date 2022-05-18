@@ -1,0 +1,9 @@
+{
+  "development": {
+    "username": "agfrllpd",
+    "password": "4KWkcKo4bCGCQTAWelcR5DTrHGNSdk2V",
+    "database": "agfrllpd",
+    "host": "drona.db.elephantsql.com",
+    "dialect": "postgres"
+  }
+}
