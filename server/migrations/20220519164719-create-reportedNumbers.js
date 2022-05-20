@@ -1,7 +1,7 @@
 'use strict';
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('reported-numbers', {
+    await queryInterface.createTable('reportedNumbers', {
       id: {
         allowNull: false,
         autoIncrement: true,
@@ -15,7 +15,7 @@ module.exports = {
         }
       },
       Number: {
-        type: Sequelize.INTEGER,
+        type: Sequelize.STRING,
       },
       isScam: {
         type: Sequelize.BOOLEAN,
@@ -36,6 +36,6 @@ module.exports = {
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('reported-numbers');
+    await queryInterface.dropTable('reportedNumbers');
   }
 };

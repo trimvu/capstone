@@ -16,7 +16,7 @@ module.exports = (sequelize, DataTypes) => {
   }
   reportedNumbers.init({
     userID: DataTypes.INTEGER,
-    Number: DataTypes.INTEGER,
+    Number: DataTypes.STRING,
     isScam: DataTypes.BOOLEAN,
     Comments: DataTypes.STRING
   }, {
