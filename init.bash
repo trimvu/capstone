@@ -1,1 +1,0 @@
-sequelize model:generate --name reported-numbers --attributes ID:string,userID:integer,Number:integer,isScam:boolean,Comments:string
