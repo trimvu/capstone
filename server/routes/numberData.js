@@ -26,12 +26,46 @@ router.post('/reportedNumbers', async(req, res) => {
 
         res.json({error:error})
     }
-    
-
-
 
 })
     
+router.get('/profileResults', async(req, res) => {
+    
+    let userID = req.body.userID
+
+    try {
+
+        let records = await db.reportedNumbers.findAll({where: {userID}})
+
+        res.json(records)
+
+    } catch (error) {
+
+        console.log(error)
+
+        res.json({error:error})
+    }
+
+})
+
+router.get('/showNumber', async(req, res) => {
+    
+    let Number = req.body.Number
+
+    try {
+
+        let records = await db.reportedNumbers.findAll({where: {Number}})
+
+        res.json(records)
+
+    } catch (error) {
+
+        console.log(error)
+
+        res.json({error:error})
+    }
+
+})
 
 
 module.exports=router
