@@ -17,6 +17,12 @@ import RequireAuth from './components/RequireAuth'
 import { checkToken } from './actions'
 import { Provider } from 'react-redux';
 
+/* 
+  React Bootstrap Configuration
+*/
+
+import "../node_modules/react-bootstrap/dist/react-bootstrap";
+import "../node_modules/bootstrap/dist/css/bootstrap.css";
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
