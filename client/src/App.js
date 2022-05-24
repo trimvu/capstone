@@ -122,7 +122,7 @@ const App = () => {
                     </div>
 
                     {/* <!-- PAGINATION?--> */}
-                    <nav aria-label="Pagination">
+                    {/* <nav aria-label="Pagination">
                         <hr class="my-0" />
                         <ul class="pagination justify-content-center my-4">
                             <li class="page-item disabled"><a class="page-link" href="#" tabindex="-1" aria-disabled="true">Newer</a></li>
@@ -130,10 +130,10 @@ const App = () => {
                             <li class="page-item"><a class="page-link" href="#!">2</a></li>
                             <li class="page-item"><a class="page-link" href="#!">3</a></li>
                             <li class="page-item disabled"><a class="page-link" href="#!">...</a></li>
-                            <li class="page-item"><a class="page-link" href="#!">15</a></li>
+                            <li class="page-item"><a class="page-link" href="#!">-3</a></li>
                             <li class="page-item"><a class="page-link" href="#!">Older</a></li>
                         </ul>
-                    </nav>
+                    </nav> */}
                 </div>
 
                 {/* <!-- Side widgets--> */}
@@ -150,7 +150,7 @@ const App = () => {
                             </div>
                         </div>
                     </div>
-                    
+
                     {/* <!-- Categories widget--> */}
                     <div class="card mb-4">
                         <div class="card-header">Categories</div>
