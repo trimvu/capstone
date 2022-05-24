@@ -16,6 +16,7 @@ const NumberResult = () => {
     const data = await fetch(`https://phonevalidation.abstractapi.com/v1/?api_key=${key}&phone=1${params.number}`);
     const details = await data.json();
     setNumberInfo(details);
+    console.log(details)
 
   }
 
@@ -41,8 +42,8 @@ const NumberResult = () => {
       <p>{numberInfo.location}</p>
       <p>{numberInfo.type}</p>
       <div>
-      {userInput.length === 0 ? "Enter Desired Stock Symbol": "Either Add this stock to your favorites or search again for a new stock"} 
-      <Forms setUserInput={setUserInput}/>
+      {/* {userInput.length === 0 ? "": ""} 
+      <Forms setUserInput={setUserInput}/> */}
     </div>
     </>
   )
