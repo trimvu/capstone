@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDOM from 'react-dom/client';
 import {BrowserRouter as Router, Route, Routes }from 'react-router-dom';
 import './index.css';
 import App from './App';
@@ -7,7 +8,7 @@ import BaseLayout from './components/layout/BaseLayout';
 import NumberResult from './components/NumberResult';
 import Signup from './components/auth/Signup';
 import Signin from './components/auth/Signin';
-import ReactDOM from 'react-dom'
+// import ReactDOM from 'react-dom'
 import Profile from './components/Profile';
 import About from './components/About';
 import {createStore, compose, applyMiddleware} from 'redux';
@@ -51,7 +52,8 @@ let store = createStore(reducer, {},
 //   </React.StrictMode>
 // );
 
-ReactDOM.render(
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
   <React.StrictMode>
     <Provider store={store}>
     <Router>
@@ -67,6 +69,5 @@ ReactDOM.render(
       </BaseLayout>
       </Router>
       </Provider>
-  </React.StrictMode>,
-  document.getElementById('root')
+  </React.StrictMode>
 );
