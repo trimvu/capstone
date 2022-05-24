@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import { key } from '../key'
 import { useParams } from 'react-router-dom'
+import Forms from '../routes/Forms'
 
 const NumberResult = () => {
+
+  const [userInput, setUserInput] = useState()
 
   let params = useParams()
 
@@ -37,6 +40,10 @@ const NumberResult = () => {
       <p>{numberInfo.carrier}</p>
       <p>{numberInfo.location}</p>
       <p>{numberInfo.type}</p>
+      <div>
+      {userInput.length === 0 ? "Enter Desired Stock Symbol": "Either Add this stock to your favorites or search again for a new stock"} 
+      <Forms setUserInput={setUserInput}/>
+    </div>
     </>
   )
 }
