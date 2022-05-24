@@ -8,7 +8,6 @@ import BaseLayout from './components/layout/BaseLayout';
 import NumberResult from './components/NumberResult';
 import Signup from './components/auth/Signup';
 import Signin from './components/auth/Signin';
-// import ReactDOM from 'react-dom'
 import Profile from './components/Profile';
 import About from './components/About';
 import {createStore, compose, applyMiddleware} from 'redux';
@@ -51,6 +50,8 @@ let store = createStore(reducer, {},
 //     </Router>
 //   </React.StrictMode>
 // );
+const root = ReactDOM.createRoot(document.getElementById('root'));
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
