@@ -15,7 +15,7 @@ import reducer from './reducers/reducer';
 import reduxThunk from 'redux-thunk'
 import RequireAuth from './components/RequireAuth'
 import { checkToken } from './actions'
-import {Provider} from 'react-redux';
+import { Provider } from 'react-redux';
 
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
@@ -52,10 +52,10 @@ ReactDOM.render(
       <BaseLayout>
           <Routes>
             <Route path='/' element={<App />}/>
-            <Route path='/:numberResult' element={<NumberResult />}/>
+            <Route path='/numberResult/:number' element={<NumberResult />}/>
             <Route path='/signUp' element={<Signup />}/>
             <Route path='/signIn' element={<Signin />}/>
-            <Route path='/profile' element={<RequireAuth><Profile /></RequireAuth>}/>
+            <Route path='/profile/:user' element={<RequireAuth><Profile /></RequireAuth>}/>
             <Route path='/aboutUs' element={<About />}/>
           </Routes>
       </BaseLayout>
