@@ -58,18 +58,18 @@ export const signIn = (formData, cb) => async dispatch => {
 }
 
 
-// export const signOut = (cb) => dispatch => {
+export const signOut = (cb) => dispatch => {
 
-//     dispatch({
-//         type: actionTypes.AUTH_USER,
-//         data: ""
-//     })
+    dispatch({
+        type: actionTypes.AUTH_USER,
+        data: ""
+    })
 
-//     localStorage.removeItem('token')
+    localStorage.removeItem('token')
 
-//     cb(); 
+    cb(); 
 
-// }
+}
 
 
 
