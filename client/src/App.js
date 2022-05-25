@@ -42,7 +42,7 @@ const App = () => {
   return (
     <>
 
-{/* NAVBAR */}
+{/* NAVBAR
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container">
                 <a class="navbar-brand" href="#">Spammy Spammy Spamaroo</a>
@@ -57,18 +57,7 @@ const App = () => {
                     </ul>
                 </div>
             </div>
-        </nav>
-
-{/* HEADER SIMPLE */}
-        {/* 
-        <div class="container">
-            <div class="text-center mt-5">
-                <h1>Report and find scams</h1>
-                <p class="lead">Got dang scammers and their extended car warranty</p>
-                <p></p>
-            </div>
-        </div>
-        */}
+        </nav> */}
 
 {/* HEADER INFO BANNER */}
         <header class="py-5 bg-light border-bottom mb-4">
