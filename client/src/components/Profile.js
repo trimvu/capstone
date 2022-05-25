@@ -1,9 +1,21 @@
-import React from 'react'
+import React, {useState} from 'react'
 
-const Profile = () => {
+const Profile = ({setUserInput}) => {
+  const [textValue, setTextValue] = useState("")
+  const handleSubmit = (e) => {
+      e.preventDefault();
+      setUserInput(textValue)
+  
+  }
   return (
-    <div>Profile</div>
+  <>
+  <form onSubmit={handleSubmit}>
+      <input type="text" value={textValue} onChange={(e)=> setTextValue(e.target.value)} />
+      <input type="submit" />
+  </form>
+  </>
   )
 }
 
 export default Profile
+

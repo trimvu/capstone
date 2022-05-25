@@ -50,12 +50,12 @@ let store = createStore(reducer, {},
 //     </Router>
 //   </React.StrictMode>
 // );
-const root = ReactDOM.createRoot(document.getElementById('root'));
+// const root = ReactDOM.createRoot(document.getElementById('root'));
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
+
     <Provider store={store}>
     <Router>
       <BaseLayout>
@@ -64,11 +64,11 @@ root.render(
             <Route path='/numberResult/:number' element={<NumberResult />}/>
             <Route path='/signUp' element={<Signup />}/>
             <Route path='/signIn' element={<Signin />}/>
-            <Route path='/profile/:user' element={<RequireAuth><Profile /></RequireAuth>}/>
+            <Route path='/profile/:users' element={<RequireAuth><Profile /></RequireAuth>}/>
             <Route path='/aboutUs' element={<About />}/>
           </Routes>
       </BaseLayout>
       </Router>
       </Provider>
-  </React.StrictMode>
+
 );
