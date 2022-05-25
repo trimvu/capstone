@@ -1,22 +1,22 @@
 import React, { useEffect, useState } from 'react'
 import { key } from '../key'
 import { useParams } from 'react-router-dom'
-import Forms from '../routes/Forms'
+// import Forms from '../routes/Forms'
 
 const NumberResult = () => {
 
-  const [userInput, setUserInput] = useState()
+  // const [userInput, setUserInput] = useState()
 
-  let params = useParams()
+  let {number} = useParams()
 
-  const [numberInfo, setNumberInfo] = useState({})
+  const [numberInfo, setNumberInfo] = useState()
 
   const phoneNumberDetail = async () => {
     
-    const data = await fetch(`https://phonevalidation.abstractapi.com/v1/?api_key=${key}&phone=1${params.number}`);
+    const data = await fetch(`https://phonevalidation.abstractapi.com/v1/?api_key=${key}&phone=1${number}`);
     const details = await data.json();
     setNumberInfo(details);
-    console.log(details)
+    console.log(numberInfo)
 
   }
 
@@ -24,27 +24,30 @@ const NumberResult = () => {
     
     phoneNumberDetail()
   
-  }, [params.number])
+  }, [])
   
 
   return (
     <>
+    
       {
-        numberInfo.format === undefined
+        numberInfo === undefined
         ?
         ''
         :
         <p>
+        <p>
           {numberInfo.format.local}
         </p>
+          <p>{numberInfo.carrier}</p>
+        <p>{numberInfo.location}</p>
+        <p>{numberInfo.type}</p>
+      </p>
       }
-      <p>{numberInfo.carrier}</p>
-      <p>{numberInfo.location}</p>
-      <p>{numberInfo.type}</p>
-      <div>
+      {/* <div> */}
       {/* {userInput.length === 0 ? "": ""} 
       <Forms setUserInput={setUserInput}/> */}
-    </div>
+    {/* </div> */}
     </>
   )
 }

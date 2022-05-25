@@ -23,6 +23,7 @@ import { Provider } from 'react-redux';
 
 import "../node_modules/react-bootstrap/dist/react-bootstrap";
 import "../node_modules/bootstrap/dist/css/bootstrap.css";
+import Signout from './components/auth/Signout';
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
@@ -50,12 +51,11 @@ let store = createStore(reducer, {},
 //     </Router>
 //   </React.StrictMode>
 // );
-const root = ReactDOM.createRoot(document.getElementById('root'));
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
+
     <Provider store={store}>
     <Router>
       <BaseLayout>
@@ -66,9 +66,10 @@ root.render(
             <Route path='/signIn' element={<Signin />}/>
             <Route path='/profile/:user' element={<RequireAuth><Profile /></RequireAuth>}/>
             <Route path='/aboutUs' element={<About />}/>
+            <Route path='/signOut' element={<Signout />}/>
           </Routes>
       </BaseLayout>
       </Router>
       </Provider>
-  </React.StrictMode>
+
 );
