@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import { key } from '../key'
 import { useParams } from 'react-router-dom'
-// import Forms from '../routes/Forms'
+import Forms from '../routes/Forms'
 
 const NumberResult = () => {
 
-  // const [userInput, setUserInput] = useState()
+  const [userInput, setUserInput] = useState()
 
   let {number} = useParams()
 
@@ -44,10 +44,10 @@ const NumberResult = () => {
         <p>{numberInfo.type}</p>
       </p>
       }
-      {/* <div> */}
-      {/* {userInput.length === 0 ? "": ""} 
-      <Forms setUserInput={setUserInput}/> */}
-    {/* </div> */}
+      {/* <div>
+      {userInput.length === 0 ? "": ""} 
+      <Forms setUserInput={setUserInput}/>
+    </div> */}
     </>
   )
 }
