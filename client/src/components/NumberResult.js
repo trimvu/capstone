@@ -3,9 +3,10 @@ import { key } from '../key'
 import { useParams } from 'react-router-dom'
 import Forms from '../routes/Forms'
 import Profile from './Profile'
-
+import axios from 'axios'
 
 const NumberResult = () => {
+  const [localData, setLocalData] = useState({})  
 
   const [userInput, setUserInput] = useState()
 
@@ -21,11 +22,25 @@ const NumberResult = () => {
     console.log(numberInfo)
 
   }
-
+  const displayNumberFetch = async() => {
+    try {
+      const data = await axios.get('/showNumber')
+        
+      console.log(data)
+      setLocalData(data.data)
+      
+    } catch (error) {
+      
+    }
+  
+  
+  }
   useEffect(() => {
     
     phoneNumberDetail()
-  
+
+    displayNumberFetch()
+
   }, [])
   
 
@@ -51,7 +66,23 @@ const NumberResult = () => {
 
       <Forms setUserInput={setUserInput}/>
     </div>
-    </>
+
+
+  
+
+    {
+    localData.map(info => {
+      return (
+        <ul>
+          <li key={info.id}>{info.isScam} {info.Comments}</li>
+        </ul>
+      )
+    })
+    }
+
+  </>
+  
+
   )
 }
 
