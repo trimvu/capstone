@@ -85,7 +85,7 @@ const App = () => {
                                 <div class="card-body">
                                     <div class="small text-muted">March 6, 2022</div>
                                     <h2 class="card-title h4">719-359-9278</h2>
-                                    <p class="card-text">This number keeps calling about my warranty on my Jeep. I have neverowned a jeep and I hate them. Ot as much as I hate this company tho.</p>
+                                    <p class="card-text">This number keeps calling about my warranty on my Jeep. I have never owned a jeep and I hate them. Not as much as I hate this company though.</p>
                                     <a class="btn btn-primary" href="#!">Add to this report →</a>
                                 </div>
                             </div>
