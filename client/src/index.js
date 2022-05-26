@@ -65,7 +65,7 @@ root.render(
             <Route path='/numberResult/:number' element={<NumberResult />}/>
             <Route path='/signUp' element={<Signup />}/>
             <Route path='/signIn' element={<Signin />}/>
-            <Route path='/profile/:users' element={<RequireAuth><Profile /></RequireAuth>}/>
+            <Route path='/profile' element={<RequireAuth><Profile /></RequireAuth>}/>
             <Route path='/aboutUs' element={<About />}/>
             <Route path='/signOut' element={<Signout />}/>
           </Routes>
