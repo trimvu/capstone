@@ -4,9 +4,10 @@ import { useParams } from 'react-router-dom'
 import Forms from '../routes/Forms'
 import Profile from './Profile'
 
+
 const NumberResult = () => {
 
-  // const [userInput, setUserInput] = useState()
+  const [userInput, setUserInput] = useState()
 
   let {number} = useParams()
 
@@ -45,7 +46,9 @@ const NumberResult = () => {
         <p>{numberInfo.type}</p>
       </p>
       }
+
       <div> 
+
       <Forms setUserInput={setUserInput}/>
     </div>
     </>
