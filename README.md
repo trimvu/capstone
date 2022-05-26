@@ -57,7 +57,7 @@
   <h4>Tri Vu</h4>
   <b>Team Role:</b>React, JavaScript, Context API, Node.js, Express, PostgreSQL.
   <h4>Felipe Galvan</h4>
-    <b>Team Role:</b>React, HTML, CSS, JavaScript, Express, PostgreSQL.
+    <b>Team Role:</b>React, HTML, CSS, JavaScript, Express, Node.js, PostgreSQL.
    <h4>Dane Jannsen</h4>
     <b>Team Role:</b>Node.js, Express, PostgreSQL, Sequelize, JavaScript, React.
     <h4>Roberto Montemayor</h4>
