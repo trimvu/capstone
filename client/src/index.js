@@ -23,6 +23,7 @@ import { Provider } from 'react-redux';
 
 import "../node_modules/react-bootstrap/dist/react-bootstrap";
 import "../node_modules/bootstrap/dist/css/bootstrap.css";
+import Signout from './components/auth/Signout';
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
@@ -66,6 +67,7 @@ root.render(
             <Route path='/signIn' element={<Signin />}/>
             <Route path='/profile/:users' element={<RequireAuth><Profile /></RequireAuth>}/>
             <Route path='/aboutUs' element={<About />}/>
+            <Route path='/signOut' element={<Signout />}/>
           </Routes>
       </BaseLayout>
       </Router>
