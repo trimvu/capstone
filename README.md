@@ -20,7 +20,7 @@
   <li>PostgreSQL</li>
   <li>Javascript</li>
   <li>CSS</li>
-  <li><HTML></li>
+  <li>HTML</li>
   <li>REST API/AJAX</li>
   <li>Styled-Components</li>
   <li>Node.js</li>
