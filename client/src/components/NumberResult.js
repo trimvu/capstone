@@ -6,7 +6,7 @@ import Profile from './Profile'
 import axios from 'axios'
 
 const NumberResult = () => {
-  const [localData, setLocalData] = useState({})  
+  const [localData, setLocalData] = useState([])  
 
   const [userInput, setUserInput] = useState()
 
@@ -18,19 +18,23 @@ const NumberResult = () => {
     
     const data = await fetch(`https://phonevalidation.abstractapi.com/v1/?api_key=${key}&phone=1${number}`);
     const details = await data.json();
+    // console.log(details)
     setNumberInfo(details);
     console.log(numberInfo)
 
   }
   const displayNumberFetch = async() => {
+    console.log(number)
     try {
-      const data = await axios.get('/showNumber')
+      const data = await axios.post('/showNumber', {
+        number
+      })
         
       console.log(data)
       setLocalData(data.data)
       
     } catch (error) {
-      
+      console.log(error);
     }
   
   

@@ -20,7 +20,7 @@ const Profile = ({setUserInput}) => {
       setLocalData(data.data)
       
     } catch (error) {
-      
+      console.log(error)
     }
   
   

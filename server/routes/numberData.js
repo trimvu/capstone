@@ -48,13 +48,19 @@ router.get('/profileResults', async(req, res) => {
 
 })
 
-router.get('/showNumber', async(req, res) => {
+router.post('/showNumber', async(req, res) => {
     
-    let Number = req.body.Number
+    let Number = req.body.number
+
+    console.log(req.body)
+
+    console.log(Number)
 
     try {
 
         let records = await db.reportedNumbers.findAll({where: {Number}})
+
+        console.log(records)
 
         res.json(records)
 
