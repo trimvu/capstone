@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { key } from '../key'
 import { useParams } from 'react-router-dom'
-// import Forms from '../routes/Forms'
+import Forms from '../routes/Forms'
+import Profile from './Profile'
 
 const NumberResult = () => {
 
@@ -44,10 +45,9 @@ const NumberResult = () => {
         <p>{numberInfo.type}</p>
       </p>
       }
-      {/* <div> */}
-      {/* {userInput.length === 0 ? "": ""} 
-      <Forms setUserInput={setUserInput}/> */}
-    {/* </div> */}
+      <div> 
+      <Forms setUserInput={setUserInput}/>
+    </div>
     </>
   )
 }
