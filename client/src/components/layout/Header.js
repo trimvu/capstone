@@ -4,8 +4,9 @@ import {Link} from 'react-router-dom'
 const Header = () => {
   return (
     <>
-{/* NAVBAR */}
-<nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+
+{/* HEADER NAVBAR */}
+        <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
             <div className="container">
                 <a className="navbar-brand">Spammy Spammy Spamaroo</a>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span className="navbar-toggler-icon"></span></button>
@@ -24,6 +25,7 @@ const Header = () => {
             </div>
         </nav>
 
+{/* ORIGINAL TESTING CODE */}
         {/* <ul>
             
             <li> <Link to="/">Home</Link> </li>

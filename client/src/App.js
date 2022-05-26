@@ -42,8 +42,8 @@ const App = () => {
   return (
     <>
 
-{/* NAVBAR
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+{/* NAVBAR */}
+        {/* <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container">
                 <a class="navbar-brand" href="#">Spammy Spammy Spamaroo</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
@@ -59,7 +59,7 @@ const App = () => {
             </div>
         </nav> */}
 
-{/* HEADER INFO BANNER */}
+{/* HEADER INFO BANNER*/}
         <header class="py-5 bg-light border-bottom mb-4">
             <div class="container">
                 <div class="text-center my-5">
@@ -67,10 +67,11 @@ const App = () => {
                     <p class="lead mb-0">A place to view and report scam callers</p>
                 </div>
             </div>
-        </header>
+        </header>  
+        
+        
 
 {/* MAIN BODY AND CONTENT */}
-{/* <!-- Page content--> */}
         <div class="container">
             <div class="row">
                 {/* <!-- Spam entries--> */}
@@ -168,8 +169,9 @@ const App = () => {
                         <div class="card-header">Search</div>
                         <div class="card-body">
                             <div class="input-group">
-                                <input class="form-control" type="text" placeholder="Enter a number..." aria-label="Enter search term..." aria-describedby="button-search" />
-                                <button class="btn btn-primary" id="button-search" type="button">Search</button>
+                                <input class="form-control" type="text" placeholder="Enter a number..." aria-label="Enter search term..." aria-describedby="button-search" value={phoneNumber} onChange={(e)=> setPhoneNumber(e.target.value)} />
+                                {/* <button class="btn btn-primary" id="button-search" type="button">Search</button> */}
+                                <input type="submit" />
                             </div>
                         </div>
                     </div>
@@ -205,28 +207,61 @@ const App = () => {
             </div>
         </div>
 
+{/* FOOTER */}
+        {/* <footer class="bg-dark py-4 mt-auto">
+            <div class="container px-5">
+                <div class="row align-items-center justify-content-between flex-column flex-sm-row">
+                    <div class="col-auto"><div class="small m-0 text-white">Copyright &copy; Pointy Boys 2022</div></div>
+                    <div class="col-auto">
+                        <a class="link-light small" href="#!">Tri V.</a>
+                        https://github.com/trimvu
+                        <span class="text-white mx-1">&middot;</span>
 
+                        <a class="link-light small" href="#!">Dane J.</a>
+                        https://github.com/NewDev11
+                        <span class="text-white mx-1">&middot;</span>
+
+                        <a class="link-light small" href="#!">Robert M.</a>
+                        https://github.com/Rob35566
+                        <span class="text-white mx-1">&middot;</span>
+
+                        <a class="link-light small" href="#!">Felipe G.</a>
+                        https://github.com/fdgalvan
+
+                    </div>
+                </div>
+            </div>
+        </footer> */}
+        
+
+        
 
         {/* <!-- Bootstrap core JS--> */}
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
         {/* <!-- Core theme JS--> */}
         <script src="js/scripts.js"></script>
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        {/* <!-- Font Awesome icons (free version)--> */}
+        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
 
-    
-    <div>
-      Scam Finder
-      <form onSubmit={handleSubmit}>
-        <input type="text" value={phoneNumber} onChange={(e)=> setPhoneNumber(e.target.value)}  />
-        <input type="submit" />
+
+
+
+{/* THIS IS WHAT WAS PRESENT BEFORE STYLING */}
+    {/* <div>
+        Scam Finder
+        <form onSubmit={handleSubmit}>
+            <input type="text" value={phoneNumber} onChange={(e)=> setPhoneNumber(e.target.value)}  />
+            <input type="submit" />
     </form>
-
-    
+    </div> */}
     {/* {scamData} */}
     {/* {phoneNumber} */}
-    </div>
-      </>
 
-  )
+    
+    </>
+
+    )
 
 }
 

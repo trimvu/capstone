@@ -39,6 +39,7 @@ const Profile = ({setUserInput}) => {
   
   }
   return (
+
   <>
 
     {
@@ -52,6 +53,7 @@ const Profile = ({setUserInput}) => {
     }
 
   </>
+
   )
 }
 
