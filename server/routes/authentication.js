@@ -7,6 +7,7 @@ const bcrypt = require('bcryptjs');
 const secrets = require('../secrets');
 
 const passport = require('passport');
+const { query } = require("express");
 
 router.use(passport.initialize());
 
@@ -78,4 +79,33 @@ router.get('/protected', requireJwt, (req, res)=>{
     
 })
 
-module.exports = router;
+
+router.get('/getNumsById', requireJwt, async(req, res)=>{
+    //request user id
+    try {
+        
+        let userID = req.user.id
+
+        console.log(userID)
+        //now we have the user id of the person that just loggerd in
+        let results = await db.reportedNumbers.findAll({where: {userID: userID}})
+        console.log(results)
+            res.json(results)
+
+    } catch (error) {
+        res.json(error)
+    }
+        
+    //query db to find all numbers entered by that specific user ID
+
+    //comes back as an array of objects
+
+
+    //send that back as a res.json to the front end
+
+    //test via TC to make sure its functional prior to completing
+
+
+})
+
+module.exports = router

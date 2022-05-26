@@ -1,4 +1,6 @@
 'use strict';
+// import reportedNumbers from '/reportedNumbers'
+
 const {
   Model
 } = require('sequelize');

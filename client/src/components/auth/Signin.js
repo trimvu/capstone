@@ -46,6 +46,7 @@ const Signin = () => {
                         <div className="row gx-5 justify-content-center">
                             <div className="col-lg-8 col-xl-6">
 
+
 {/* Sign In */}
 <form onSubmit={handleSubmit} className="form">
                   <div className="form-outline mb-4 form__field">
@@ -65,7 +66,8 @@ const Signin = () => {
                   </label>
                 </div> */}
 
-        <div className="form__field">
+
+        <div>
           <input type="submit" />
         </div>
 
