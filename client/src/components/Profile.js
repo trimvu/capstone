@@ -1,7 +1,36 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
+import axios from 'axios'
+
+
 
 const Profile = ({setUserInput}) => {
+  const [localData, setLocalData] = useState({})  
   const [textValue, setTextValue] = useState("")
+  const displayProfileFetch = async() => {
+    try {
+      const data = await axios.get('/getNumsById', {
+        headers: {
+          "authorization": localStorage.token
+          
+        }
+      })
+      console.log(data)
+      setLocalData(data.data)
+      
+    } catch (error) {
+      
+    }
+  
+  
+  }
+  
+  useEffect(() => {
+    displayProfileFetch()
+  
+    
+  }, [])
+  
+
   const handleSubmit = (e) => {
       e.preventDefault();
       setUserInput(textValue)
@@ -9,13 +38,9 @@ const Profile = ({setUserInput}) => {
   }
   return (
   <>
-  <form onSubmit={handleSubmit}>
-      <input type="text" value={textValue} onChange={(e)=> setTextValue(e.target.value)} />
-      <input type="submit" />
-  </form>
+  
   </>
   )
 }
 
 export default Profile
-
