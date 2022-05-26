@@ -244,21 +244,24 @@ const App = () => {
         {/* <!-- Font Awesome icons (free version)--> */}
         <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
 
-    
+
+
+
+{/* THIS IS WHAT WAS PRESENT BEFORE STYLING */}
     {/* <div>
         Scam Finder
         <form onSubmit={handleSubmit}>
             <input type="text" value={phoneNumber} onChange={(e)=> setPhoneNumber(e.target.value)}  />
             <input type="submit" />
-    </form> */}
-
-    
+    </form>
+    </div> */}
     {/* {scamData} */}
     {/* {phoneNumber} */}
-    {/* </div> */}
-      </>
 
-  )
+    
+    </>
+
+    )
 
 }
 
