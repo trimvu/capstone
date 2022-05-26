@@ -44,10 +44,10 @@ const NumberResult = () => {
         <p>{numberInfo.type}</p>
       </p>
       }
-      {/* <div>
-      {userInput.length === 0 ? "": ""} 
+      <div>
+      {/* {userInput.length === 0 ? "": ""}  */}
       <Forms setUserInput={setUserInput}/>
-    </div> */}
+    </div>
     </>
   )
 }

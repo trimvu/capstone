@@ -27,17 +27,17 @@ const Signin = () => {
 
       <h1>Sign In</h1>
 
-      <form onSubmit={handleSubmit} className="form">
+      <form onSubmit={handleSubmit} >
 
-        <div className="form__field">
+        <div>
           <input type="email" value={email} onChange={e => setEmail(e.target.value)} placeholder='Please enter your registered e-mail here' />
         </div>
 
-        <div className="form__field">
+        <div>
           <input type="password" value={password} onChange={e => setPassword(e.target.value)} placeholder='(☞ﾟヮﾟ)☞☜(ﾟヮﾟ☜)' />
         </div>
 
-        <div className="form__field">
+        <div>
           <input type="submit" />
         </div>
 
