@@ -4,11 +4,9 @@ import axios from 'axios'
 
 
 const Profile = ({setUserInput}) => {
-  const [localData, setLocalData] = useState(new Map())  
+  const [localData, setLocalData] = useState([])  
 
-  const updateMap = (key, value) => {
-    setLocalData(map => new Map(map.set(key, value)))
-  }
+
   // const [textValue, setTextValue] = useState("")
   const displayProfileFetch = async() => {
     try {
@@ -35,11 +33,11 @@ const Profile = ({setUserInput}) => {
   }, [])
   
 
-  // const handleSubmit = (e) => {
-  //     e.preventDefault();
-  //     setUserInput(textValue)
+  const handleSubmit = (e) => {
+      e.preventDefault();
+      // setUserInput(textValue)
   
-  // }
+  }
   return (
   <>
 
@@ -47,7 +45,7 @@ const Profile = ({setUserInput}) => {
     localData.map(info => {
       return (
         <ul>
-          <li key={info}>{info.Number} {info.Comments}</li>
+          <li key={info.id}>{info.Number} {info.Comments}</li>
         </ul>
       )
     })

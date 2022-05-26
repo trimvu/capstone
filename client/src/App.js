@@ -63,7 +63,7 @@ const App = () => {
         <header class="py-5 bg-light border-bottom mb-4">
             <div class="container">
                 <div class="text-center my-5">
-                    <h1 class="fw-bolder">Welcome to Spammy Spammy Spamaroo!</h1>
+                    <h1 class="fw-bolder">Welcome to Spam Call Registry</h1>
                     <p class="lead mb-0">A place to view and report scam callers</p>
                 </div>
             </div>
@@ -85,7 +85,7 @@ const App = () => {
                                 <div class="card-body">
                                     <div class="small text-muted">March 6, 2022</div>
                                     <h2 class="card-title h4">719-359-9278</h2>
-                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla.</p>
+                                    <p class="card-text">This number keeps calling about my warranty on my Jeep. I have neverowned a jeep and I hate them. Ot as much as I hate this company tho.</p>
                                     <a class="btn btn-primary" href="#!">Add to this report →</a>
                                 </div>
                             </div>
@@ -95,7 +95,7 @@ const App = () => {
                                 <div class="card-body">
                                     <div class="small text-muted">January 12, 2022</div>
                                     <h2 class="card-title h4">719-626-6290</h2>
-                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla.</p>
+                                    <p class="card-text">This company is a total freaking scam. screw these chicken hawks I would burn this company to the ground if I knew their actual address. They took like 52k from my aunts cousins sister and shes all bankrupt af now. I hate them the most and I wish they walk infront of a bus or something idk. Don’t give this company money , they are predatory. Not like chris Hansen predatory but like… that movie predator. With bill drake. He plays the crazy black guy that loses his mind after he sees his buddy (played by jesse ventura) get wasted by a shoulder mounted plasma cannon. Damn that was a kick ass movie. Anyway screw this company.</p>
                                     <a class="btn btn-primary" href="#!">Add to this report →</a>
                                 </div>
                             </div>
@@ -105,7 +105,7 @@ const App = () => {
                                 <div class="card-body">
                                     <div class="small text-muted">January 12, 2022</div>
                                     <h2 class="card-title h4">719-626-6290</h2>
-                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla.</p>
+                                    <p class="card-text">this company is so annoying. they call me all the time and try to sell me life insurance. i ended up gettting a plan and it was a total ripoff. backstabbing swindlers!.</p>
                                     <a class="btn btn-primary" href="#!">Add to this report →</a>
                                 </div>
                             </div>
@@ -117,7 +117,7 @@ const App = () => {
                                 <div class="card-body">
                                     <div class="small text-muted">December 16, 2021</div>
                                     <h2 class="card-title h4">719-248-9256</h2>
-                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla.</p>
+                                    <p class="card-text">this is number is actually a legit company</p>
                                     <a class="btn btn-primary" href="#!">Add to this report →</a>
                                 </div>
                             </div>
@@ -127,7 +127,7 @@ const App = () => {
                                 <div class="card-body">
                                     <div class="small text-muted">May 5, 2022</div>
                                     <h2 class="card-title h4">719-553-8112</h2>
-                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla.</p>
+                                    <p class="card-text">I've tried blocking this number but they keep calling from different numbers. they suck and I hate them</p>
                                     <a class="btn btn-primary" href="#!">Add to this report →</a>
                                 </div>
                             </div>
@@ -137,7 +137,7 @@ const App = () => {
                                 <div class="card-body">
                                     <div class="small text-muted">May 5, 2022</div>
                                     <h2 class="card-title h4">719-553-8112</h2>
-                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla.</p>
+                                    <p class="card-text">this number calls me night and day and I'm sick of it. Total scam</p>
                                     <a class="btn btn-primary" href="#!">Add to this report →</a>
                                 </div>
                             </div>
