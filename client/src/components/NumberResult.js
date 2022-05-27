@@ -78,7 +78,8 @@ const NumberResult = () => {
     localData.map(info => {
       return (
         <ul>
-          <li key={info.id}>{info.isScam} {info.Comments}</li>
+          <li key={info.id}>Is this number a scam?: {info.isScam.toString()}
+          <br /> Comment: {info.Comments}</li>
         </ul>
       )
     })
