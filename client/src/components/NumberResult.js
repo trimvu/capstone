@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import { key } from '../key'
+// import { key } from '../key'
 import { useParams } from 'react-router-dom'
 import Forms from '../routes/Forms'
-import Profile from './Profile'
 import axios from 'axios'
 
 const NumberResult = () => {

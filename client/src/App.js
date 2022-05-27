@@ -1,15 +1,14 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import React, { useState, useEffect } from 'react'
-import { key } from './key'
+// import { key } from './key'
 import { useNavigate } from 'react-router-dom'
 
 
 const App = () => {
   const [phoneNumber, setPhoneNumber] = useState("");
   const [submittedPhoneNumber, setSubmittedPhoneNumber] = useState("");
-  const [scamData, setScamData] = useState("");
-  const [input, setInput] = useState("")
+
 
   const navigate = useNavigate()
 
