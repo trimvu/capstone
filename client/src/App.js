@@ -96,7 +96,7 @@ const App = () => {
                                 <div class="card-body">
                                     <div class="small text-muted">January 12, 2022</div>
                                     <h2 class="card-title h4">719-626-6290</h2>
-                                    <p class="card-text">This company is a total freaking scam. screw these chicken hawks I would burn this company to the ground if I knew their actual address. They took like 52k from my aunts cousins sister and shes all bankrupt af now. I hate them the most and I wish they walk infront of a bus or something idk. Don’t give this company money , they are predatory. Not like chris Hansen predatory but like… that movie predator. With bill drake. He plays the crazy black guy that loses his mind after he sees his buddy (played by jesse ventura) get wasted by a shoulder mounted plasma cannon. Damn that was a kick ass movie. Anyway screw this company.</p>
+                                    <p class="card-text">Cant believe this company scammed my brother out of 1500, what a ripp off, glad i get to report them and hope he gets his money back.</p>
                                     <a class="btn btn-primary" href="#!">Add to this report →</a>
                                 </div>
                             </div>
@@ -138,7 +138,7 @@ const App = () => {
                                 <div class="card-body">
                                     <div class="small text-muted">May 5, 2022</div>
                                     <h2 class="card-title h4">719-553-8112</h2>
-                                    <p class="card-text">this number calls me night and day and I'm sick of it. Total scam</p>
+                                    <p class="card-text">This company is a total freaking scam. screw these chicken hawks I would burn this company to the ground if I knew their actual address. They took like 52k from my aunts cousins sister and shes all bankrupt af now. I hate them the most and I wish they walk infront of a bus or something idk. Don’t give this company money , they are predatory. Not like chris Hansen predatory but like… that movie predator. With bill drake. He plays the crazy black guy that loses his mind after he sees his buddy (played by jesse ventura) get wasted by a shoulder mounted plasma cannon. Damn that was a kick ass movie. Anyway screw this company.</p>
                                     <a class="btn btn-primary" href="#!">Add to this report →</a>
                                 </div>
                             </div>
@@ -166,43 +166,19 @@ const App = () => {
 
                     {/* <!-- SEARCH WIDGET--> */}
                     <div class="card mb-4">
-                        <div class="card-header">Search</div>
-                        <div class="card-body">
-                            <div class="input-group">
-                                <input class="form-control" type="text" placeholder="Enter a number..." aria-label="Enter search term..." aria-describedby="button-search" value={phoneNumber} onChange={(e)=> setPhoneNumber(e.target.value)} />
-                                {/* <button class="btn btn-primary" id="button-search" type="button">Search</button> */}
-                                <input type="submit" />
-                            </div>
-                        </div>
+
                     </div>
+                        <div>
+                            Search for a Number
+                            <form onSubmit={handleSubmit}>
+                                <input type="text" value={phoneNumber} onChange={(e)=> setPhoneNumber(e.target.value)}  />
+                                <input type="submit" />
+                            </form>
+                        </div>
+
 
                     {/* <!-- Categories widget--> */}
-                    <div class="card mb-4">
-                        <div class="card-header">Categories</div>
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col-sm-6">
-                                    <ul class="list-unstyled mb-0">
-                                        <li><a href="#!">Option 1</a></li>
-                                        <li><a href="#!">Option 2</a></li>
-                                        <li><a href="#!">Option 3</a></li>
-                                    </ul>
-                                </div>
-                                <div class="col-sm-6">
-                                    <ul class="list-unstyled mb-0">
-                                        <li><a href="#!">Option 4</a></li>
-                                        <li><a href="#!">Option 5</a></li>
-                                        <li><a href="#!">Option 6</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    {/* <!-- Side widget--> */}
-                    <div class="card mb-4">
-                        <div class="card-header">Side Widget</div>
-                        <div class="card-body">You can put anything you want inside of these side widgets. They are easy to use, and feature the Bootstrap 5 card component!</div>
-                    </div>
+
                 </div>
             </div>
         </div>
