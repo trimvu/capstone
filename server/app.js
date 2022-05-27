@@ -8,6 +8,10 @@ require("dotenv").config()
 app.use(require('./routes/authentication.js'))
 app.use(require('./routes/numberData'))
 
+app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname+"/public/index.html"));
+});
+
 app.listen(port, () => {
     console.log(`listening on port ${port}`)
 })
