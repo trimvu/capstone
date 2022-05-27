@@ -4,7 +4,7 @@ const app = express();
 let port = process.env.PORT || 3001;
 require("dotenv").config()
 
-
+app.use(express.static(path.join(__dirname, '/public')));
 app.use(require('./routes/authentication.js'))
 app.use(require('./routes/numberData'))
 
