@@ -39,9 +39,12 @@ export const signIn = (formData, cb) => async dispatch => {
 
         let response = await axios.post('/login', formData)
 
+        console.log("action user login", response)
+
         dispatch({
             type: actionTypes.AUTH_USER,
-            data: response.data.token
+            data: response.data.token, 
+            userID: response.data.userID
         })
 
         cb()
