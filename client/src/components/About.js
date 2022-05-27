@@ -1,7 +1,7 @@
 import React from 'react'
 
 const About = () => {
-  return (
+    return (
     // <div>About</div>
 
     <>
@@ -28,7 +28,7 @@ const About = () => {
                         <div className="col-lg-6"><img className="img-fluid rounded mb-5 mb-lg-0" src="/Scam_6x4.jpg" alt="..." /></div>
                         <div className="col-lg-6">
                             <h2 className="fw-bolder">Our founding</h2>
-                            <p className="lead fw-normal text-muted mb-0">Scammers suck. They really really suck. Iusto est, ut esse a labore aliquam beatae expedita. Blanditiis impedit numquam libero molestiae et fugit cupiditate, quibusdam expedita, maiores eaque quisquam.</p>
+                            <p className="lead fw-normal text-muted mb-0">Scammers suck. According to CNBC, in 2020 it was estimated that $29.8 billion were lost to phone scams in the United States alone. About 59.4 million people were affected. Even if you haven't been scammed, it's helpful to millions if we are able to keep track of and document numbers that tried to scam you.</p>
                         </div>
                     </div>
                 </div>
@@ -57,7 +57,7 @@ const About = () => {
                             <div className="text-center">
                             <a className="link" href='http://www.github.com/NewDev11'><img className="img-fluid rounded-circle mb-4 px-4" src="/Dane_150.jpg" alt="..." /></a>
                                 <h5 className="fw-bolder">Dane Janssen</h5>
-                                <div className="fst-italic text-muted">OG Pointy Boy</div>
+                                <div className="fst-italic text-muted">Florida Man</div>
                             </div>
                         </div>
 

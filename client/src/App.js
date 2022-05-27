@@ -223,7 +223,7 @@ const App = () => {
 
 
 
-{/* THIS IS WHAT WAS PRESENT BEFORE STYLING */}
+{/* THIS IS ORIGINALLY HERE BEFORE STYLING */}
     {/* <div>
         Scam Finder
         <form onSubmit={handleSubmit}>
