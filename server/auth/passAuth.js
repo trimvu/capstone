@@ -7,7 +7,7 @@ const db = require('../models');
 
 const bcrypt = require('bcryptjs');
 
-const secrets = require('../secrets');
+
 
 let options = {
     usernameField: 'email'
@@ -31,6 +31,7 @@ let localLogin = new LocalStrategy(options, async (email, password, done)=>{
                     return done(null, false) 
                 }
 
+                // console.log("local login record: ", records)
                 return done(null, records[0]) 
             }) 
 
@@ -53,7 +54,7 @@ passport.use(localLogin)
 
 let jwtOptions = {
     jwtFromRequest: ExtractJwt.fromHeader('authorization'),
-    secretOrKey: secrets.secrets,
+    secretOrKey: process.env.AUTH_SECRETS,
 }
 
 let jwtLogin = new JwtStrategy(jwtOptions, async (payload, done)=>{ 

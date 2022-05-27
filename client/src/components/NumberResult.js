@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import { key } from '../key'
+// import { key } from '../key'
 import { useParams } from 'react-router-dom'
 import Forms from '../routes/Forms'
-import Profile from './Profile'
 import axios from 'axios'
 
 const NumberResult = () => {
@@ -16,7 +15,7 @@ const NumberResult = () => {
 
   const phoneNumberDetail = async () => {
     
-    const data = await fetch(`https://phonevalidation.abstractapi.com/v1/?api_key=${key}&phone=1${number}`);
+    const data = await fetch(`https://phonevalidation.abstractapi.com/v1/?api_key=${process.env.REACT_APP_AUTH_KEY}&phone=1${number}`);
     const details = await data.json();
     // console.log(details)
     setNumberInfo(details);

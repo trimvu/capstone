@@ -4,7 +4,7 @@ const jwt = require('jwt-simple');
 const db = require('../models');
 const bcrypt = require('bcryptjs');
 
-const secrets = require('../secrets');
+
 
 const passport = require('passport');
 const { query } = require("express");
@@ -67,7 +67,8 @@ router.post('/register', async (req, res) => {
 
 router.post('/login', requireLogin, (req, res) => {
 
-    res.json({token: token(req.user)})
+    // console.log("user loging route: ", req.user)
+    res.json({token: token(req.user), userID: req.user.dataValues.id})
 
 })
 

@@ -57,7 +57,9 @@ const About = () => {
                             <div className="text-center">
                             <a className="link" href='http://www.github.com/NewDev11'><img className="img-fluid rounded-circle mb-4 px-4" src="/Dane_150.jpg" alt="..." /></a>
                                 <h5 className="fw-bolder">Dane Janssen</h5>
-                                <div className="fst-italic text-muted">Florida Man</div>
+
+                                <div className="fst-italic text-muted">Back End Developer</div>
+
                             </div>
                         </div>
 
