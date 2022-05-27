@@ -4,7 +4,7 @@ const jwt = require('jwt-simple');
 const db = require('../models');
 const bcrypt = require('bcryptjs');
 
-const secrets = require('../secrets');
+
 
 const passport = require('passport');
 const { query } = require("express");
