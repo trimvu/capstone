@@ -1,24 +1,32 @@
 import React, {useState} from 'react'
-
+import { useParams } from 'react-router-dom'
 
 const Forms = ({setUserInput}) => {
     const [textValue, setTextValue] = useState("")
     const [trueValue, setTrueValue] = useState(true)
     const [falseValue, setFalseValue] = useState(false)
     const [user, setUser] = useState("")
-    const [number, setNumber] = useState("")
+
+    let {number} = useParams()
     
     const handleSubmit = (e) => {
+
         e.preventDefault();
         setUserInput(textValue)
     
     }
 
     
+    
     return (
     <>
+    
     <form onSubmit={handleSubmit}>
         <fieldset>
+            <label>Phone number: <br />
+                <input type="text" value={number} />
+            </label>
+            <br />
             <label>Is this phone number a scam? <br />
                 <input type="radio" name="is_scam" value={trueValue} onChange={(e) => setTrueValue(e.target.value)} />
                 <label htmlFor="Yes">Yes</label> &nbsp; 
