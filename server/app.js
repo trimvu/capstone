@@ -1,7 +1,8 @@
 
 const express = require('express');
 const app = express();
-let port = 3001;
+let port = process.env.PORT || 3001;
+require("dotenv").config()
 
 
 app.use(require('./routes/authentication.js'))

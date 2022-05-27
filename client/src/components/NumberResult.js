@@ -16,7 +16,7 @@ const NumberResult = () => {
 
   const phoneNumberDetail = async () => {
     
-    const data = await fetch(`https://phonevalidation.abstractapi.com/v1/?api_key=${key}&phone=1${number}`);
+    const data = await fetch(`https://phonevalidation.abstractapi.com/v1/?api_key=${process.env.REACT_APP_AUTH_KEY}&phone=1${number}`);
     const details = await data.json();
     // console.log(details)
     setNumberInfo(details);
