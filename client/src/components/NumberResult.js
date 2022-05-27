@@ -19,7 +19,7 @@ const NumberResult = () => {
     const details = await data.json();
     // console.log(details)
     setNumberInfo(details);
-    console.log(numberInfo)
+    console.log(numberInfo) 
 
   }
   const displayNumberFetch = async() => {
