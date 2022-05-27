@@ -31,6 +31,7 @@ let localLogin = new LocalStrategy(options, async (email, password, done)=>{
                     return done(null, false) 
                 }
 
+                // console.log("local login record: ", records)
                 return done(null, records[0]) 
             }) 
 

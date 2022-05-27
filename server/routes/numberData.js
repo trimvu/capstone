@@ -15,10 +15,10 @@ router.post('/reportedNumbers', async(req, res) => {
 
     try {
         let newNumberEntry = await db.reportedNumbers.create({userID, Number, isScam, Comments})
-
+        
         let records = await db.reportedNumbers.findAll({where: {userID}})
-
-        res.json(records)
+        
+        res.json(newNumberEntry, records)
 
     } catch (error) {
 
