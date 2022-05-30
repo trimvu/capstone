@@ -24,7 +24,7 @@ const token = (userRecord) => {
     
     let timestamp = new Date().getTime();
 
-    return jwt.encode({sub: userRecord.id, iat: timestamp}, env.AUTH_SECRETS)
+    return jwt.encode({sub: userRecord.id, iat: timestamp}, process.env.AUTH_SECRETS)
 
 }
 
