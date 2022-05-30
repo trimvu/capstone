@@ -9,7 +9,11 @@ const BaseLayout = (props) => {
         <Header />
         
         <br />
+        
         {props.children}
+
+        <br />
+
         <Footer />
     </>
   )
