@@ -3,7 +3,8 @@ const router = express.Router();
 const jwt = require('jwt-simple');
 const db = require('../models');
 const bcrypt = require('bcryptjs');
-
+const env = require('dotenv').config().parsed
+// const secrets = require('../secrets')
 
 
 const passport = require('passport');
@@ -23,7 +24,7 @@ const token = (userRecord) => {
     
     let timestamp = new Date().getTime();
 
-    return jwt.encode({sub: userRecord.id, iat: timestamp}, secrets.secrets)
+    return jwt.encode({sub: userRecord.id, iat: timestamp}, env.AUTH_SECRETS)
 
 }
 

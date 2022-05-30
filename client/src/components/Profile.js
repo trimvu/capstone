@@ -1,10 +1,23 @@
 import React, {useState, useEffect} from 'react'
 import axios from 'axios'
+import { useDispatch } from 'react-redux'
+import { useNavigate } from 'react-router-dom'
+import { signOut } from '../actions'
 
 
 
 const Profile = ({setUserInput}) => {
   const [localData, setLocalData] = useState([])  
+
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+
+  const logout = () => {
+
+    dispatch(signOut(()=>{
+      navigate('/')
+    }))
+  }
 
 
   // const [textValue, setTextValue] = useState("")
@@ -127,6 +140,8 @@ const Profile = ({setUserInput}) => {
 {/* ------------------------------------------------------------------------- */}
 
 {/* ORIGINAL CODE BEFORE STYLING */}
+
+    <button onClick={logout} >Sign Out</button>
 
     {
     localData.map(info => {
