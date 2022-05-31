@@ -69,7 +69,7 @@ const Profile = ({setUserInput}) => {
             </div>
 
             <div className="d-flex justify-content-center">
-                  <button onClick={logout} >Sign Out</button>
+                  <button onClick={logout} >Sign Out.</button>
             </div>
         </header>  
 
