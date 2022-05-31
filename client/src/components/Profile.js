@@ -3,6 +3,7 @@ import axios from 'axios'
 import { useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import { signOut } from '../actions'
+import { useSelector } from 'react-redux'
 
 
 
@@ -11,6 +12,9 @@ const Profile = ({setUserInput}) => {
 
   const navigate = useNavigate();
   const dispatch = useDispatch();
+
+  const email = useSelector((state) => state.email)
+  console.log(email)
 
   const logout = () => {
 
@@ -60,7 +64,7 @@ const Profile = ({setUserInput}) => {
             <div class="container">
                 <div class="text-center my-5">
                     <h1 class="fw-bolder">Profile</h1>
-                    <p class="lead mb-0">Information for PROFILE</p>
+                    <p class="lead mb-0">Information for <b><b>{email}</b></b></p>
                 </div>
             </div>
         </header>  
@@ -144,6 +148,28 @@ const Profile = ({setUserInput}) => {
     <button onClick={logout} >Sign Out</button>
 
     {
+        localData.map(info => {
+            return (
+                <section class="pt-4">
+                    <div class="container px-lg-5">
+                        <div class="row gx-lg-5">
+                            <div class="col-lg-6 col-xxl-4 mb-5">
+                                <div class="card bg-light border-0 h-100">
+                                    <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
+                                        <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><i class="bi bi-patch-check"></i></div>
+                                        <h2 class="fs-4 fw-bold">{info.Number}</h2>
+                                        <p class="mb-0">{info.Comments} </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            )
+        })
+    }
+
+    {/* {
     localData.map(info => {
       return (
         <ul>
@@ -151,7 +177,7 @@ const Profile = ({setUserInput}) => {
         </ul>
       )
     })
-    }
+    } */}
     
 
   </>

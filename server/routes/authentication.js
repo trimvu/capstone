@@ -68,8 +68,8 @@ router.post('/register', async (req, res) => {
 
 router.post('/login', requireLogin, (req, res) => {
 
-    // console.log("user loging route: ", req.user)
-    res.json({token: token(req.user), userID: req.user.dataValues.id})
+    console.log("user loging route: ", req.user)
+    res.json({token: token(req.user), userID: req.user.dataValues.id, email: req.user.dataValues.email})
 
 })
 
