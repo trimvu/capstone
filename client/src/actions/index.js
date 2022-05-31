@@ -44,7 +44,8 @@ export const signIn = (formData, cb) => async dispatch => {
         dispatch({
             type: actionTypes.AUTH_USER,
             data: response.data.token, 
-            userID: response.data.userID
+            userID: response.data.userID,
+            email: response.data.email
         })
 
         cb()

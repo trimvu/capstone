@@ -3,7 +3,8 @@ import actionTypes from '../actions/actionTypes';
 const initialState = {
    auth: "",
    error: "",
-   userID: ""
+   userID: "",
+   email: ""
 }
 
 const reducerTemplate = (state = initialState, action) => {
@@ -14,7 +15,8 @@ const reducerTemplate = (state = initialState, action) => {
             return {
                 ...state,
                 auth: action.data,
-                userID: action.userID
+                userID: action.userID,
+                email: action.email
             }
         case actionTypes.ERROR:
             return {
