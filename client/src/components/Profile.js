@@ -3,6 +3,7 @@ import axios from 'axios'
 import { useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import { signOut } from '../actions'
+import { useSelector } from 'react-redux'
 
 
 
@@ -11,6 +12,9 @@ const Profile = ({setUserInput}) => {
 
   const navigate = useNavigate();
   const dispatch = useDispatch();
+
+  const email = useSelector((state) => state.email)
+  console.log(email)
 
   const logout = () => {
 
@@ -60,7 +64,7 @@ const Profile = ({setUserInput}) => {
             <div className="container">
                 <div className="text-center my-5">
                     <h1 className="fw-bolder">Profile</h1>
-                    <p className="lead mb-0">Information for PROFILE</p>
+                    <p className="lead mb-0">Information for <b><b>{email}</b></b></p>                
                 </div>
             </div>
 
