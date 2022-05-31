@@ -78,7 +78,11 @@ const Signin = () => {
                 {/* <p class="text-center text-muted mt-5 mb-0">Have already an account? <a href="#!"
                     class="fw-bold text-body"><u>Login here</u></a></p> */}
 </form>
-<p>Need an account? Register here <Link to="/signup" >Register Here</Link></p>
+
+{/* <p>Need an account? Register here <Link to="/signup" >Register Here</Link></p> */}
+
+<p class="text-center text-muted mt-5 mb-0">Need an account? <Link to="/signup" ><a class="fw-bold text-body"><u>Register here</u></a></Link></p>
+
                             </div>
                         </div>
                     </div>
