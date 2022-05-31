@@ -166,9 +166,12 @@ const App = () => {
 
                     </div>
                         <div>
-                            Search for a Number
+                            Search for a Number <br />
+                            (Do not add dash. <br />
+                            Ex. 5668675309. <br />
+                            NOT 566-867-5309)
                             <form onSubmit={handleSubmit}>
-                                <input type="text" value={phoneNumber} onChange={(e)=> setPhoneNumber(e.target.value)}  />
+                                <input type="text" value={phoneNumber} onChange={(e)=> setPhoneNumber(e.target.value)} pattern="[0-9]{10}" />
                                 <input type="submit" />
                             </form>
                         </div>
