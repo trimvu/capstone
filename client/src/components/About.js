@@ -58,7 +58,7 @@ const About = () => {
                             <a className="link" href='http://www.github.com/NewDev11'><img className="img-fluid rounded-circle mb-4 px-4" src="/Dane_150.jpg" alt="..." /></a>
                                 <h5 className="fw-bolder">Dane Janssen</h5>
 
-                                <div className="fst-italic text-muted">Back End Developer</div>
+                                <div className="fst-italic text-muted">Back-End Developer</div>
 
                             </div>
                         </div>
@@ -68,7 +68,7 @@ const About = () => {
                             <div className="text-center">
                             <a className="link" href='http://www.github.com/Rob35566'><img className="img-fluid rounded-circle mb-4 px-4" src="/Rob_150.jpeg" alt="..." /></a>
                                 <h5 className="fw-bolder">Roberto Montemayor</h5>
-                                <div className="fst-italic text-muted">Language Aficionado</div>
+                                <div className="fst-italic text-muted">Front-End Developer</div>
                             </div>
                         </div>
 
@@ -77,7 +77,7 @@ const About = () => {
                             <div className="text-center">
                             <a className="link" href='http://www.github.com/fdgalvan'><img className="img-fluid rounded-circle mb-4 px-4" src="/Felipe_150.jpeg" alt="..." /></a>
                                 <h5 className="fw-bolder">Felipe Galvan</h5>
-                                <div className="fst-italic text-muted">Anxious Mess</div>
+                                <div className="fst-italic text-muted">Design, Technical Writer</div>
                             </div>
                         </div>
                     </div>
