@@ -49,31 +49,36 @@ const NumberResult = () => {
 
   return (
     <>
-    
+
       {
         numberInfo === undefined
         ?
         ''
         :
-        <p>
-        <p>
-          {numberInfo.format.local}
-        </p>
-          <p>{numberInfo.carrier}</p>
-        <p>{numberInfo.location}</p>
-        <p>{numberInfo.type}</p>
-      </p>
+        <div>
+          <header className="py-5 bg-light border-bottom mb-4">
+              <div className="container">
+                  <div className="text-center my-5">
+                      <h1 className="fw-bolder">{numberInfo.format.local}</h1>
+                      <p className="lead mb-0">Carrier: {numberInfo.carrier}</p>                
+                      <p className="lead mb-0">State: {numberInfo.location}</p>                
+                      <p className="lead mb-0">Type of Line: {numberInfo.type}</p>                
+                  </div>
+              </div>
+          </header>
+        </div>
       }
 
       <div> 
 
       <Forms setUserInput={setUserInput}/>
-    </div>
+      
+      </div>
 
 
   
 
-    {
+    {/* {
     localData.map(info => {
       return (
         <ul>
@@ -82,6 +87,28 @@ const NumberResult = () => {
         </ul>
       )
     })
+    } */}
+
+    {
+        localData.map(info => {
+            return (
+                <section className="pt-4">
+                    <div className="container px-lg-5">
+                        <div className="d-flex justify-content-center row gx-lg-5">
+                            <div className="col-lg-6 col-xxl-4 mb-5">
+                                <div className="card bg-light border-0 h-100">
+                                    <div className="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
+                                        <div className="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><i className="bi bi-patch-check"></i></div>
+                                        <h2 className="fs-4 fw-bold">Is this number a scam?: {info.isScam.toString()}</h2>
+                                        <p className="mb-0">Comment: {info.Comments} </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            )
+        })
     }
 
   </>

@@ -42,28 +42,38 @@ const Forms = ({setUserInput}) => {
     
     return (
     <>
+
+    <h2 class="card-title d-flex justify-content-center">REPORT FORM</h2>
+
+    <div class="card mb-4">
+
+        <div class="card-body d-flex justify-content-center">
+
+            <form onSubmit={handleSubmit}>
+                <fieldset>
+                    <label>Phone number: <br />
+                        <input type="text" value={number} />
+                    </label>
+                    <br />
+                    <label>Is this phone number a scam? <br />
+                        <input type="radio" name="is_scam" value={true} onChange={(e) => setScamValue(e.target.value)} />
+                        <label htmlFor="Yes">Yes</label> &nbsp; 
+                        <input type="radio" name="is_scam" value={false} onChange={(e) => setScamValue(e.target.value)} />
+                        <label htmlFor="No">No</label>
+                    </label>
+                    <br />
+                    <label>What was this phone call about? <br />
+                        <textarea type="text" rows={10} cols={60} value={textValue} onChange={(e)=> setTextValue(e.target.value)} maxLength="1000" required />
+                        <div id="counter"></div>
+                    </label>
+                    <br />
+                    <input type="submit" />
+                </fieldset>
+            </form>
+
+        </div>
+    </div>
     
-    <form onSubmit={handleSubmit}>
-        <fieldset>
-            <label>Phone number: <br />
-                <input type="text" value={number} />
-            </label>
-            <br />
-            <label>Is this phone number a scam? <br />
-                <input type="radio" name="is_scam" value={true} onChange={(e) => setScamValue(e.target.value)} />
-                <label htmlFor="Yes">Yes</label> &nbsp; 
-                <input type="radio" name="is_scam" value={false} onChange={(e) => setScamValue(e.target.value)} />
-                <label htmlFor="No">No</label>
-            </label>
-            <br />
-            <label>What was this phone call about? <br />
-                <textarea type="text" rows={10} cols={60} value={textValue} onChange={(e)=> setTextValue(e.target.value)} maxLength="1000" required />
-                <div id="counter"></div>
-            </label>
-            <br />
-            <input type="submit" />
-        </fieldset>
-    </form>
     </>
     )
 }
