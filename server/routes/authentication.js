@@ -110,4 +110,23 @@ router.get('/getNumsById', requireJwt, async(req, res)=>{
 
 })
 
+router.get('/profileEmail', requireJwt, async(req, res) => {
+    
+        
+    try {
+        let id = req.user.id
+        // console.log("EMAIL ID", id)
+        let email = await db.users.findAll({where: {id: id}})
+        // console.log("the email: ", email)
+        res.json(email)
+
+    } catch (error) {
+
+        console.log(error)
+
+        res.json({error})
+    }
+
+})
+
 module.exports = router
