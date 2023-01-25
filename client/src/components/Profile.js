@@ -3,18 +3,19 @@ import axios from 'axios'
 import { useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import { signOut } from '../actions'
-import { useSelector } from 'react-redux'
+// import { useSelector } from 'react-redux'
 
 
 
 const Profile = ({setUserInput}) => {
-  const [localData, setLocalData] = useState([])  
+  const [localData, setLocalData] = useState([])
+  const [email, setEmail] = useState()  
 
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
-  const email = useSelector((state) => state.email)
-  console.log(email)
+//   const email = useSelector((state) => state.email)
+//   console.log(email)
 
   const logout = () => {
 
@@ -33,7 +34,7 @@ const Profile = ({setUserInput}) => {
           
         }
       })
-      console.log(data)
+    //   console.log("display data", data)
       setLocalData(data.data)
       
     } catch (error) {
@@ -42,11 +43,25 @@ const Profile = ({setUserInput}) => {
   
   
   }
+
+  const displayEmail = async() => {
+    try {
+        const data = await axios.get('/profileEmail', {
+            headers: {
+                "authorization": localStorage.token
+            }
+        })
+        // console.log("the email data", data)
+        setEmail(data.data[0].email)
+    } catch (error) {
+        console.log(error)
+    }
+  }
   
   useEffect(() => {
     displayProfileFetch()
   
-    
+    displayEmail()
   }, [])
   
 
