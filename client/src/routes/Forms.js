@@ -1,16 +1,16 @@
 import axios from 'axios'
 import React, {useState} from 'react'
 import { useParams } from 'react-router-dom'
-import { useSelector } from 'react-redux'
+// import { useSelector } from 'react-redux'
 
-const Forms = ({setUserInput}) => {
+const Forms = ({ userID }) => {
     const [textValue, setTextValue] = useState("")
     // const [trueValue, setTrueValue] = useState(true)
     // const [falseValue, setFalseValue] = useState(false)
     const [scamValue, setScamValue] = useState(null)
-    const userID = useSelector((state) => state.userID)
+    // const userID = useSelector((state) => state)
 
-    
+    // console.log(userID)
 
     let {number} = useParams()
     
@@ -27,10 +27,11 @@ const Forms = ({setUserInput}) => {
             Comments : textValue
         }) 
 
-        console.log(submitScam)
+        // console.log(submitScam)
 
         if(submitScam.status === 200){
             alert("Your information was submitted!")
+            window.location.reload();
         }
         else {
             alert("Sorry! Your information was NOT submitted.")
@@ -43,11 +44,11 @@ const Forms = ({setUserInput}) => {
     return (
     <>
 
-    <h2 class="card-title d-flex justify-content-center">REPORT FORM</h2>
+    <h2 className="card-title d-flex justify-content-center">REPORT FORM</h2>
 
-    <div class="card mb-4">
+    <div className="card mb-4">
 
-        <div class="card-body d-flex justify-content-center">
+        <div className="card-body d-flex justify-content-center">
 
             <form onSubmit={handleSubmit}>
                 <fieldset>
@@ -62,7 +63,7 @@ const Forms = ({setUserInput}) => {
                         <label htmlFor="No">No</label>
                     </label>
                     <br />
-                    <label>What was this phone call about? <br />
+                    <label>Explain: <br />
                         <textarea type="text" rows={10} cols={60} value={textValue} onChange={(e)=> setTextValue(e.target.value)} maxLength="1000" required />
                         <div id="counter"></div>
                     </label>

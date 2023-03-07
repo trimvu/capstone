@@ -52,15 +52,15 @@ router.post('/showNumber', async(req, res) => {
     
     let Number = req.body.number
 
-    console.log(req.body)
+    // console.log(req.body)
 
-    console.log(Number)
+    // console.log(Number)
 
     try {
 
         let records = await db.reportedNumbers.findAll({where: {Number}})
 
-        console.log(records)
+        // console.log(records)
 
         res.json(records)
 

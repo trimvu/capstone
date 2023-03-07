@@ -57,11 +57,11 @@ const App = () => {
         </nav> */}
 
 {/* HEADER INFO BANNER*/}
-        <header class="py-5 bg-light border-bottom mb-4">
-            <div class="container">
-                <div class="text-center my-5">
-                    <h1 class="fw-bolder">Welcome to Spam Call Registry</h1>
-                    <p class="lead mb-0">A place to view and report scam callers</p>
+        <header className="py-5 bg-light border-bottom mb-4">
+            <div className="container">
+                <div className="text-center my-5">
+                    <h1 className="fw-bolder">Welcome to Spam Call Registry</h1>
+                    <p className="lead mb-0">A place to view and report scam callers</p>
                 </div>
             </div>
         </header>  
@@ -69,74 +69,74 @@ const App = () => {
         
 
 {/* MAIN BODY AND CONTENT */}
-        <div class="container">
-            <div class="row">
+        <div className="container">
+            <div className="row">
                 {/* <!-- Spam entries--> */}
-                <div class="col-lg-8">
+                <div className="col-lg-8">
 
                     {/* <!-- Nested row for spam posts--> */}
-                    <div class="row">
-                        <div class="col-lg-6">
+                    <div className="row">
+                        <div className="col-lg-6">
                             {/* <!-- Spam post--> */}
-                            <div class="card mb-4">
+                            <div className="card mb-4">
                                 {/* <a href="#!"><img class="card-img-top" src="https://dummyimage.com/700x350/dee2e6/6c757d.jpg" alt="..." /></a> */}
-                                <div class="card-body">
-                                    <div class="small text-muted">March 6, 2022</div>
-                                    <h2 class="card-title h4">719-359-9278</h2>
-                                    <p class="card-text">This number keeps calling about my warranty on my Jeep. I have never owned a jeep and I hate them. Not as much as I hate this company though.</p>
-                                    <a class="btn btn-primary" href="#!">Add to this report →</a>
+                                <div className="card-body">
+                                    <div className="small text-muted">March 6, 2022</div>
+                                    <h2 className="card-title h4">719-359-9278</h2>
+                                    <p className="card-text">This number keeps calling about my warranty on my Jeep. I have never owned a jeep and I hate them. Not as much as I hate this company though.</p>
+                                    <a className="btn btn-primary" href="#!">Add to this report →</a>
                                 </div>
                             </div>
                             {/* <!-- Spam post--> */}
-                            <div class="card mb-4">
+                            <div className="card mb-4">
                                 {/* <a href="#!"><img class="card-img-top" src="https://dummyimage.com/700x350/dee2e6/6c757d.jpg" alt="..." /></a> */}
-                                <div class="card-body">
-                                    <div class="small text-muted">January 12, 2022</div>
-                                    <h2 class="card-title h4">719-626-6290</h2>
-                                    <p class="card-text">Cant believe this company scammed my brother out of 1500, what a ripp off, glad i get to report them and hope he gets his money back.</p>
-                                    <a class="btn btn-primary" href="#!">Add to this report →</a>
+                                <div className="card-body">
+                                    <div className="small text-muted">January 12, 2022</div>
+                                    <h2 className="card-title h4">719-626-6290</h2>
+                                    <p className="card-text">Cant believe this company scammed my brother out of 1500, what a ripp off, glad i get to report them and hope he gets his money back.</p>
+                                    <a className="btn btn-primary" href="#!">Add to this report →</a>
                                 </div>
                             </div>
                             {/* <!-- Spam post--> */}
-                            <div class="card mb-4">
+                            <div className="card mb-4">
                                 {/* <a href="#!"><img class="card-img-top" src="https://dummyimage.com/700x350/dee2e6/6c757d.jpg" alt="..." /></a> */}
-                                <div class="card-body">
-                                    <div class="small text-muted">January 12, 2022</div>
-                                    <h2 class="card-title h4">719-626-6290</h2>
-                                    <p class="card-text">this company is so annoying. they call me all the time and try to sell me life insurance. i ended up gettting a plan and it was a total ripoff. backstabbing swindlers!.</p>
-                                    <a class="btn btn-primary" href="#!">Add to this report →</a>
+                                <div className="card-body">
+                                    <div className="small text-muted">January 12, 2022</div>
+                                    <h2 className="card-title h4">719-626-6290</h2>
+                                    <p className="card-text">this company is so annoying. they call me all the time and try to sell me life insurance. i ended up gettting a plan and it was a total ripoff. backstabbing swindlers!.</p>
+                                    <a className="btn btn-primary" href="#!">Add to this report →</a>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-6">
+                        <div className="col-lg-6">
                             {/* <!-- Spam post--> */}
-                            <div class="card mb-4">
+                            <div className="card mb-4">
                                 {/* <a href="#!"><img class="card-img-top" src="https://dummyimage.com/700x350/dee2e6/6c757d.jpg" alt="..." /></a> */}
-                                <div class="card-body">
-                                    <div class="small text-muted">December 16, 2021</div>
-                                    <h2 class="card-title h4">719-248-9256</h2>
-                                    <p class="card-text">this is number is actually a legit company</p>
-                                    <a class="btn btn-primary" href="#!">Add to this report →</a>
+                                <div className="card-body">
+                                    <div className="small text-muted">December 16, 2021</div>
+                                    <h2 className="card-title h4">719-248-9256</h2>
+                                    <p className="card-text">this is number is actually a legit company</p>
+                                    <a className="btn btn-primary" href="#!">Add to this report →</a>
                                 </div>
                             </div>
                             {/* <!-- Spam post--> */}
-                            <div class="card mb-4">
+                            <div className="card mb-4">
                                 {/* <a href="#!"><img class="card-img-top" src="https://dummyimage.com/700x350/dee2e6/6c757d.jpg" alt="..." /></a> */}
-                                <div class="card-body">
-                                    <div class="small text-muted">May 5, 2022</div>
-                                    <h2 class="card-title h4">719-553-8112</h2>
-                                    <p class="card-text">I've tried blocking this number but they keep calling from different numbers. they suck and I hate them</p>
-                                    <a class="btn btn-primary" href="#!">Add to this report →</a>
+                                <div className="card-body">
+                                    <div className="small text-muted">May 5, 2022</div>
+                                    <h2 className="card-title h4">719-553-8112</h2>
+                                    <p className="card-text">I've tried blocking this number but they keep calling from different numbers. they suck and I hate them</p>
+                                    <a className="btn btn-primary" href="#!">Add to this report →</a>
                                 </div>
                             </div>
                             {/* <!-- Spam post--> */}
-                            <div class="card mb-4">
+                            <div className="card mb-4">
                                 {/* <a href="#!"><img class="card-img-top" src="https://dummyimage.com/700x350/dee2e6/6c757d.jpg" alt="..." /></a> */}
-                                <div class="card-body">
-                                    <div class="small text-muted">May 5, 2022</div>
-                                    <h2 class="card-title h4">719-553-8112</h2>
-                                    <p class="card-text">This company is a total freaking scam. screw these chicken hawks I would burn this company to the ground if I knew their actual address. They took like 52k from my aunts cousins sister and shes all bankrupt af now. I hate them the most and I wish they walk infront of a bus or something idk. Don’t give this company money , they are predatory. Not like chris Hansen predatory but like… that movie predator. With bill drake. He plays the crazy black guy that loses his mind after he sees his buddy (played by jesse ventura) get wasted by a shoulder mounted plasma cannon. Damn that was a kick ass movie. Anyway screw this company.</p>
-                                    <a class="btn btn-primary" href="#!">Add to this report →</a>
+                                <div className="card-body">
+                                    <div className="small text-muted">May 5, 2022</div>
+                                    <h2 className="card-title h4">719-553-8112</h2>
+                                    <p className="card-text">This company is a total freaking scam. screw these chicken hawks I would burn this company to the ground if I knew their actual address. They took like 52k from my aunts cousins sister and shes all bankrupt af now. I hate them the most and I wish they walk infront of a bus or something idk. Don’t give this company money , they are predatory. Not like chris Hansen predatory but like… that movie predator. With bill drake. He plays the crazy black guy that loses his mind after he sees his buddy (played by jesse ventura) get wasted by a shoulder mounted plasma cannon. Damn that was a kick ass movie. Anyway screw this company.</p>
+                                    <a className="btn btn-primary" href="#!">Add to this report →</a>
                                 </div>
                             </div>
                         </div>
@@ -158,11 +158,11 @@ const App = () => {
                 </div>
 
                 {/* <!-- Side widgets--> */}
-                <div class="col-lg-4">
+                <div className="col-lg-4">
 
 
                     {/* <!-- SEARCH WIDGET--> */}
-                    <div class="card mb-4">
+                    <div className="card mb-4">
 
                     </div>
                         <div>
@@ -218,7 +218,7 @@ const App = () => {
         <script src="js/scripts.js"></script>
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         {/* <!-- Font Awesome icons (free version)--> */}
-        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossOrigin="anonymous"></script>
 
 
 
