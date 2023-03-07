@@ -1,7 +1,13 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
+import { useSelector } from 'react-redux'
 
 const Header = () => {
+
+    const auth = useSelector(state => state.auth)
+    
+    // console.log(auth)
+    
   return (
     <>
 
@@ -13,8 +19,20 @@ const Header = () => {
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li className="nav-item"><Link to="/" className="nav-link active" aria-current="page">Home</Link></li>
-                        <li className="nav-item"><Link to="/signIn" className="nav-link">Sign In</Link></li>
-                        <li className="nav-item"><Link to="/signUp" className="nav-link">Sign Up</Link></li>
+                        {
+                            auth === '' || auth === undefined
+                            ?
+                            <li className="nav-item"><Link to="/signIn" className="nav-link">Sign In</Link></li>
+                            :
+                            ''
+                        }
+                        {
+                            auth === '' || auth === undefined
+                            ?
+                            <li className="nav-item"><Link to="/signUp" className="nav-link">Sign Up</Link></li>
+                            :
+                            ''
+                        }
                         {/* <li className="nav-item"><Link to="/signOut" className="nav-link">Sign Out</Link></li> */}
                         {/* <li className="nav-item"><Link to="/NumberResult/:number" className="nav-link">Number Result</Link></li> */}
                         <li className="nav-item"><Link to="/profile/" className="nav-link">Profile</Link></li>

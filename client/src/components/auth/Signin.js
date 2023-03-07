@@ -81,7 +81,7 @@ const Signin = () => {
 
 {/* <p>Need an account? Register here <Link to="/signup" >Register Here</Link></p> */}
 
-<p class="text-center text-muted mt-5 mb-0">Need an account? <Link to="/signup" ><a class="fw-bold text-body"><u>Register here</u></a></Link></p>
+<p className="text-center text-muted mt-5 mb-0">Need an account? <Link to="/signup" ><a className="fw-bold text-body"><u>Register here</u></a></Link></p>
 
                             </div>
                         </div>

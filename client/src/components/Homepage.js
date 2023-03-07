@@ -7,11 +7,11 @@ const Homepage = () => {
     <>
 
 {/* TOP INFO BANNER */}
-    <header class="py-5 bg-light border-bottom mb-4">
-            <div class="container">
-                <div class="text-center my-5">
-                    <h1 class="fw-bolder">Welcome to Spammy Spammy Spamaroo!</h1>
-                    <p class="lead mb-0">A place to view and report scam callers</p>
+    <header className="py-5 bg-light border-bottom mb-4">
+            <div className="container">
+                <div className="text-center my-5">
+                    <h1 className="fw-bolder">Welcome to Spammy Spammy Spamaroo!</h1>
+                    <p className="lead mb-0">A place to view and report scam callers</p>
                 </div>
             </div>
         </header>

@@ -68,14 +68,14 @@ router.post('/register', async (req, res) => {
 
 router.post('/login', requireLogin, (req, res) => {
 
-    console.log("user loging route: ", req.user)
+    // console.log("user loging route: ", req.user)
     res.json({token: token(req.user), userID: req.user.dataValues.id, email: req.user.dataValues.email})
 
 })
 
 router.get('/protected', requireJwt, (req, res)=>{
 
-    console.log('Passed protected page')
+    // console.log('Passed protected page')
 
     res.json({isValid: true})
     
@@ -88,10 +88,10 @@ router.get('/getNumsById', requireJwt, async(req, res)=>{
         
         let userID = req.user.id
 
-        console.log(userID)
+        // console.log(userID)
         //now we have the user id of the person that just loggerd in
         let results = await db.reportedNumbers.findAll({where: {userID: userID}})
-        console.log(results)
+        // console.log(results)
             res.json(results)
 
     } catch (error) {

@@ -5,13 +5,13 @@ import Forms from '../routes/Forms'
 import axios from 'axios'
 
 const NumberResult = () => {
-  const [localData, setLocalData] = useState([])  
 
-  const [userInput, setUserInput] = useState()
+  const [localData, setLocalData] = useState([])  
+  // const [userInput, setUserInput] = useState()
+  const [numberInfo, setNumberInfo] = useState()
+  const [userID, setUserID] = useState()
 
   let {number} = useParams()
-
-  const [numberInfo, setNumberInfo] = useState()
 
   const phoneNumberDetail = async () => {
     
@@ -19,30 +19,46 @@ const NumberResult = () => {
     const details = await data.json();
     // console.log(details)
     setNumberInfo(details);
-    console.log(numberInfo) 
+    // console.log(numberInfo) 
 
   }
   const displayNumberFetch = async() => {
-    console.log(number)
+    // console.log(number)
     try {
       const data = await axios.post('/showNumber', {
         number
       })
         
-      console.log(data)
+      // console.log(data)
       setLocalData(data.data)
       
     } catch (error) {
       console.log(error);
     }
   
-  
   }
+
+  const displayEmail = async() => {
+    try {
+      const data = await axios.get('/profileEmail', {
+        headers: {
+          "authorization": localStorage.token
+        }
+      })
+      // console.log("the email data", data)
+      setUserID(data.data[0].id)
+    } catch (error) {
+        console.log(error)
+    }
+  }
+
   useEffect(() => {
     
     phoneNumberDetail()
 
     displayNumberFetch()
+
+    displayEmail()
 
   }, [])
   
@@ -71,7 +87,7 @@ const NumberResult = () => {
 
       <div> 
 
-      <Forms setUserInput={setUserInput}/>
+      <Forms userID={userID} />
       
       </div>
 

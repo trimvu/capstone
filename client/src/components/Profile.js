@@ -26,23 +26,21 @@ const Profile = ({setUserInput}) => {
 
 
   // const [textValue, setTextValue] = useState("")
-  const displayProfileFetch = async() => {
-    try {
-      const data = await axios.get('/getNumsById', {
-        headers: {
-          "authorization": localStorage.token
-          
+    const displayProfileFetch = async() => {
+        try {
+            const data = await axios.get('/getNumsById', {
+                headers: {
+                    "authorization": localStorage.token
+            
+                }
+            })
+            // console.log("display data", data)
+            setLocalData(data.data)
+
+        } catch (error) {
+            console.log(error)
         }
-      })
-    //   console.log("display data", data)
-      setLocalData(data.data)
-      
-    } catch (error) {
-      console.log(error)
     }
-  
-  
-  }
 
   const displayEmail = async() => {
     try {
