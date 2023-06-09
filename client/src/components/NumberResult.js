@@ -14,11 +14,27 @@ const NumberResult = () => {
   let {number} = useParams()
 
   const phoneNumberDetail = async () => {
+
+    var myHeaders = new Headers();
+    myHeaders.append("apikey", "NEMuOCvPdwkf8r9RWgiwjJ9dmdzPTC5L");
+
+    var requestOptions = {
+      method: 'GET',
+      redirect: 'follow',
+      headers: myHeaders
+    };
+
+    fetch(`https://api.apilayer.com/number_verification/validate?number=1${number}`, requestOptions)
+      .then(response => response.json())
+      .then(result => {
+        setNumberInfo(result)
+      })
+      .catch(error => console.log('error', error));
     
-    const data = await fetch(`https://phonevalidation.abstractapi.com/v1/?api_key=${process.env.REACT_APP_AUTH_KEY}&phone=1${number}`);
-    const details = await data.json();
+    // const data = await fetch(`https://phonevalidation.abstractapi.com/v1/?api_key=${process.env.REACT_APP_AUTH_KEY}&phone=1${number}`);
+    // const details = await data.json();
     // console.log(details)
-    setNumberInfo(details);
+    // setNumberInfo(details);
     // console.log(numberInfo) 
 
   }
@@ -75,10 +91,10 @@ const NumberResult = () => {
           <header className="py-5 bg-light border-bottom mb-4">
               <div className="container">
                   <div className="text-center my-5">
-                      <h1 className="fw-bolder">{numberInfo.format.local}</h1>
+                      <h1 className="fw-bolder">{numberInfo.local_format}</h1>
                       <p className="lead mb-0">Carrier: {numberInfo.carrier}</p>                
                       <p className="lead mb-0">State: {numberInfo.location}</p>                
-                      <p className="lead mb-0">Type of Line: {numberInfo.type}</p>                
+                      <p className="lead mb-0">Type of Line: {numberInfo.line_type}</p>                
                   </div>
               </div>
           </header>
